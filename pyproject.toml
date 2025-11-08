@@ -1,0 +1,20 @@
+[project]
+name = "codex-multi-agent"
+version = "0.1.0"
+description = "Sample multi agent system built with the Google Agent Development Kit."
+requires-python = ">=3.10"
+readme = "AGENTS.md"
+license = { text = "MIT" }
+authors = [{ name = "Codex Sample" }]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "mypy>=1.8", "ruff>=0.3"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["agents", "agents.*", "core", "core.*", "resources", "scripts"]
